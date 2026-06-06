@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Поздравление с Днём Рождения (5х)</title>
+<title>Поздравление с Днём Рождения</title>
 
 <style>
     body {
@@ -74,7 +74,7 @@
 <h1>🎉 С Днём Рождения! 🎂</h1>
 
 <button onclick="showGreeting()">
-    🎁 Получить поздравление
+    🎁 Получить поздравление (5х)
 </button>
 
 <div id="message"></div>
@@ -101,6 +101,7 @@ function showGreeting() {
     }
 }
 
+
 // Конфетти из эмодзи
 const emojis = ["🎈", "🎉", "🎊", "🎂", "🎁"];
 
@@ -110,6 +111,7 @@ for (let i = 0; i < 25; i++) {
     emoji.textContent = emojis[Math.floor(Math.random() * emojis.length)];
 
     emoji.style.left = Math.random() * 100 + "vw";
+    emoji.style.top = "-200px";
     emoji.style.animationDuration = (Math.random() * 5 + 3) + "s";
     emoji.style.animationDelay = Math.random() * 5 + "s";
 
