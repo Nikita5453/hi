@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Поздравление с Днём Рождения</title>
+<title>Поздравление с Днём Рождения (5х)</title>
 
 <style>
     body {
@@ -83,16 +83,22 @@
 const greetings = [
     "🎉 С днём рождения! Пусть все мечты сбываются!",
     "🎂 Желаю счастья, здоровья и удачи!",
-    "🎁 Пусть каждый день приносит радость!",
-    "🥳 Улыбок, успехов и отличного настроения!",
-    "✨ Пусть жизнь будет яркой и счастливой!"
+    "🎁 Что б и дальше у тебя все было прекрасно",
+    "🥳 Что б было много денег",
+    "✨ И что б тебя не заменил ИИ"
 ];
 
-function showGreeting() {
-    const random =
-        greetings[Math.floor(Math.random() * greetings.length)];
+let currentGreeting = 0;
 
-    document.getElementById("message").textContent = random;
+function showGreeting() {
+    document.getElementById("message").textContent =
+        greetings[currentGreeting];
+
+    currentGreeting++;
+
+    if (currentGreeting >= greetings.length) {
+        currentGreeting = 0;
+    }
 }
 
 // Конфетти из эмодзи
